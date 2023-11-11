@@ -26,18 +26,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func heightSliderChanged(_ sender: UISlider) {
-        var heightValue = heightSlider.value
-        var heightValueRounded = (heightValue*100).rounded()/100
-        heightLabel.text = "\(heightValueRounded)m"
+        heightLabel.text = "\(String(format: "%.2f", sender.value))m"
         
-        print("\(heightValueRounded)m")
+        print("\(String(format: "%.2f", sender.value))m")
     }
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
-        var weightValue = weightSlider.value
-        var weightValueRounded = (weightValue*100).rounded()/100
-        weightLabel.text = "\(weightValueRounded)Kg"
-        print("\(weightValueRounded)Kg")
+        weightLabel.text = "\(String(format: "%.2f", sender.value))Kg"
+        print("\(String(format: "%.2f", sender.value))Kg")
     }
 }
 
